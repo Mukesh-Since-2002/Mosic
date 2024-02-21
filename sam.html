@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>mosic</title>
+</head>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+	*
+	{
+	margin:0;
+	padding:0;
+	
+	}
+	
+	
+	nav
+	{
+	font-family: 'Tilt Neon', cursive;
+	}
+	nav ul
+	{
+	justify-items: center;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	background-color: black;
+	color: white;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	}
+	nav ul li
+	{
+	padding: 0 9px;
+	font-size: 12px;
+	}
+	.logo
+	{
+	
+	height: 50px;
+	width: 60px;
+	margin-left: 10px;
+	
+	}
+	.brand
+	{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1rem;
+	padding-left: 0;
+	}
+	.playbackground
+	{
+	
+	}
+	.bottom
+	{
+	background-color: black;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	border: 1px solid black;
+	color: white;
+	width: 100%;
+	height: 11%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	}
+	
+	#myprogressbar
+	{
+	text-align: center;
+	height: 6px;
+	width: 1000px;
+	border-radius: 10px;
+	}
+	
+	.play
+	{
+	background-color: black;
+	height: 100px;
+	}
+	
+	.playlist
+	{
+	float: left;
+	height: 450px;
+	width: 20%;
+	border: 2px solid black;
+	margin-left: 12px;
+	margin-top: 20px;
+	border-radius: 10px;
+	position: sticky;
+	background-color: black;
+	align-items: center;
+	}
+	.player
+	{
+	float: left;
+	height: 450px;
+	width: 70%;
+	border: 2px solid black;
+	margin-left: 12px;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: black;
+	}
+	
+	.userico
+	{
+	position: absolute;
+	display: flex;
+	right: 9px;
+	margin-right: 2px;
+	height: 20px;
+	width: 20px;
+	}
+	.topicon
+	{
+	height: 15px;
+	width: 15px;
+	margin-left: 14px;
+	}
+	.icon
+	{
+	margin: 7px 13px;
+	cursor: pointer;
+	
+	}
+	a
+	{
+	color: white;
+	text-decoration: none;
+	}
+	.size
+	{
+	height: 25px;
+	width: 25px;
+	border-radius: 10px;
+	
+	
+	}
+	.lol
+	{
+	color: white;
+	height: 50px;
+	width: 200px;
+	background-color: white;
+	border-radius: 20px;
+	}
+	.icon1
+	{
+	height: 10px;
+	width: 10px;
+
+	}
+	.text
+	{
+	color: black;
+	}
+
+</style>
+	
+<body bgcolor="antiquewhite">
+
+<nav>
+    <ul>
+        <img src="mosic-logo.svg" class="logo" alt="mosic">
+        <li class="brand">Mosic</li>
+        <li><a href="home.html" class="link"><img src="home.png" class="topicon">Home</a></li>
+        <li><a href="search.html" class="link"><img src="search.png" class="topicon">Search</a></li>
+        <li><a href="playlist.html" class="link"><img src="playlist.png" class="topicon">Playlist</a></li>
+        <img src="user.png" class="userico">
+    </ul>
+</nav>
+<div class="playbackground">
+    <div class="playlist">
+        <div class="lol"><br>
+            <img src="excuse.jpeg" class="size">
+            <b class="text">Excuse-AP Dillon</b>
+            <img src="play1.png" class="icon1" onclick="playpauseAudio()">
+        </div>
+    </div>
+
+    <div class="player">
+
+    </div>
+</div>
+
+
+<footer class="bottom">
+    <input type="range" name="range" min="0" max="100" id="myprogressbar">
+    <div>
+        <img src="backword.png" class="icon" onclick="seekBackward()">
+        <img src="play.png" class="icon" onclick="playpauseAudio()">
+        <img src="forword.png" class="icon" onclick="seekForward()">
+    </div>
+</footer>
+
+<script>
+	var audioFileUrl = 'D:/Mukesh thakur/mosic/excuse.mp3';
+    var audio = new Audio(audioFileUrl);
+
+    function playpauseAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    function seekForward() {
+        audio.currentTime += 5;
+    }
+
+    function seekBackward() {
+        audio.currentTime -= 5;
+    }
+</script>
+
+</body>
+</html>

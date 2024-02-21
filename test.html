@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>mosic</title>
+</head>
+
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+	*
+	{
+	margin:0;
+	paddind:0;
+	
+	}
+	
+	
+	nav
+	{
+	font-family: 'Tilt Neon', cursive;
+	
+	}
+	nav ul
+	{
+	
+	judtify-item:center;
+	display:flex;
+	align-items:center;
+	list-style-type:none;
+	background-color:black;
+	color:white;
+	padding:0;
+	height:45px;
+	width:100%;
+	
+	}
+	nav ul li
+	{
+	padding:0 9px;
+	font-size:12px;
+	}
+	.logo
+	{
+	
+	height:50px;
+	width:60px;
+	margin-left:10px;
+	
+	}
+	.brand
+	{
+	dislpay: flex;
+	align-items: center;
+	text-align:center;
+	font-weight:bolder;
+	font-size:1rem;
+	padding-left:0;
+
+	}
+	.playbackground
+	{
+	
+	}
+
+	.bottom
+	{
+	background-color:black;
+	display:flex;
+	position:fixed;
+	bottom:0;
+	border:1px solid black;
+	color:white;
+	width:99.83%;
+	height:11%;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	}
+	
+
+	#seekBar
+	{
+	text-align:center;
+	height:6px;
+	width:1000px;
+	border-radius:10px;
+	}
+	
+
+	
+#007bff
+	.play
+	{
+	background-color:black;
+	height:100px;
+	}
+	
+	.playlist
+	{
+	float:left;
+	height:450px;
+	width:20%;
+	border:2px solid black;
+	margin-left:12px;
+	margin-top:20px;
+	border-radius:10px;
+	position:sticky;
+	background-color:black;
+	justify-content: center;
+	align-items: center;
+	}
+	.player
+	{
+	float:left;
+	height:450px;
+	width:70%;
+	border:2px solid black;
+	margin-left:12px;
+	margin-top:20px;
+	border-radius:10px;
+	background-color:black;
+	}
+	
+	.userico
+	{
+	position:absolute;
+	display:flex;
+	right:9px;
+	margin-right:2px;
+	height:20px;
+	width:20px;
+	}
+	.topicon
+	{
+	height:15px;
+	width:15px;
+	margin-left:14px;
+	}
+	.icon
+	{
+	margin:7px 13px;
+	cursor:pointer;
+	
+	}
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+	.size
+	{
+	height:25px;
+	width:25px;
+	border-radius:10px;
+	margin-left:10px;
+	
+	}
+	.lol
+	{
+	color:white;
+	height:40px;
+	width:90%;
+	background-color:white;
+	border-radius:10px;
+	display: flex;
+	justify-content: left;
+        align-items: center;
+	margin-top:10px;
+	}
+	.icon1
+	{
+	height:15px;
+	width:15px;
+	margin-right:10px;
+	}
+	.text
+	{
+	color:black;
+	}
+
+	.ico
+	{
+	Height:20px;
+	width:20 px;
+	}
+	.icon3
+	{
+	height:35 px;
+	width:35px;
+	}
+	.td1
+	{
+	
+	width:10%;
+	margin-left:0px;
+	
+	}
+	.td2
+	{
+	width:500px;
+	margin-left:5px;
+	}
+	.td3
+	{
+	
+	
+	width:10%;
+	margin-right:10px;
+	}
+	table
+	{
+	margin-left:1px;
+	}
+
+	.playing {
+    	animation: colorChange 0.5s infinite alternate; /* Adjust animation properties as needed */
+	}
+
+		@keyframes colorChange {
+   		from {
+       	 	background-color: black;
+       	 	color: white;
+    		}
+    		to {
+        	background-color: green; /* Change to your desired color */
+        	color: black; /* Change to your desired color */
+    		}
+	}
+
+
+</style>
+	
+	
+
+
+<body bgcolor="antiquewhite">
+
+
+    <nav>
+        <ul>
+		<img src="mosic-logo.svg" class="logo" alt="mosic">
+            <li class="brand">Mosic</li>
+
+            <li><a href="home.html" class="link"><img src="home.png" class="topicon">Home</a></li>
+            <li><a href="search.html" class="link"><img src="search.png" class="topicon">Search</a></li>
+	    <li><a href="playlist.html" class="link"><img src="playlist.png" class="topicon">Playlist</a></li>
+		<img src="user.png" class="userico"
+        </ul>
+	
+    </nav>
+
+	<div class="playbackground">
+
+		<div class="playlist">
+			<center>
+				
+	
+			
+			<div class="lol" id="1">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="paro.jpeg" class="size"></td>
+ 			
+				<td class="td2"><b class="text">Paro Paro<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>
+	
+			</div>
+			<div class="lol" id="2">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="gangster.jpeg" class="size"></td>
+	 			
+				<td class="td2"><b class="text">Gangsters Paradise<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>
+		
+			</div>
+			<div class="lol" id="3">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="raatan.jpeg" class="size"></td>
+	 			
+				<td class="td2"><b class="text">Raatan<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>		
+
+			</div>
+			<div class="lol" id="4">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="check.jpeg" class="size"></td>
+ 				
+				<td class="td2"><b class="text">Check it out<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>
+		
+			</div>
+			<div class="lol" id="5">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="dance.jpeg" class="size"></td>
+ 				
+				<td class="td2"><b class="text">Dance<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>	
+				</table>	
+				</center>	
+
+			</div>
+			<div class="lol" id="6">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="summerhigh.jpeg" class="size"></td>
+	 			
+				<td class="td2"><b class="text">Summerehigh<b></td>
+				<td class="td3"><img src="play1.png" class="icon1"  onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>
+	
+			</div>
+			<div class="lol" id="7">
+					<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="thoda.jpeg" class="size"></td>
+ 				
+				<td class="td2"><b class="text">Thoda<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>	
+
+			</div>
+			<div class="lol" id="8">
+				<center>
+				<table>
+				<tr>
+				<td class="td1"><img src="excuse.jpeg" class="size"></td>
+ 				
+				<td class="td2"><b class="text">Excuse<b></td>
+				<td class="td3"><img src="play1.png" class="icon1" onclick="playpauseAudio()"></td>
+				</tr>
+				</table>
+				</center>
+
+			</div>
+	
+	
+			</center>
+		</div>
+
+		<div class="player">
+	
+		</div>
+		
+</div>
+
+	
+	<footer class="bottom">
+	
+	
+	<input type="range" id="seekBar" min="0" value="0">
+	<div>
+	<table>
+	<tr>
+	<td><img src="privious.png" class="icon3" onclick="previous()"></td>
+	<td><img src="backword.png" class="icon" onclick="seekBackward()"></td>
+	<td onclick="playpauseAudio()"><img src="play.png" class="ico" id="playPauseImage"></td>
+	<td><img src="forword.png" class="icon" onclick="seekForward()"></td>
+	<td><img src="next.png" class="icon3" onclick="next()"></td> 
+	</tr>
+	</table>
+	</div>
+	
+	</footer>
+</body>
+	
+
+
+
+
+	<script language="javascript">
+	
+  var audioFileUrl =["D:/Mukesh thakur/mosic/paro.mp3", "D:/Mukesh thakur/mosic/gangsters paradise.mp3", "D:/Mukesh thakur/mosic/raatan.mp3", "D:/Mukesh thakur/mosic/check it out.mp3", "D:/Mukesh thakur/mosic/dance.mp3", "D:/Mukesh thakur/mosic/summerhigh.mp3", "D:/Mukesh thakur/mosic/thoda.mp3","D:/Mukesh thakur/mosic/excuse.mp3"];
+	
+	var i = 0;
+	var playPauseImage = document.getElementById("playPauseImage");
+	function next() {
+            i++;
+            if (i >= audioFileUrl.length) {
+                i = 0; 
+            }
+            audioPlayer.src = audioFileUrl[i];
+            audioPlayer.play();
+        }
+
+        function previous() {
+            i--;
+            if (i < 0) {
+                i = audioFileUrl.length - 1;
+            }
+            audioPlayer.src = audioFileUrl[i];
+            audioPlayer.play();
+        }
+
+        var audioPlayer = new Audio(audioFileUrl[i]);
+
+        function playpauseAudio() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+		playPauseImage.src = "pause.png";
+		audioPlayer.classList.add("playing");
+            	}	 
+		else {
+                audioPlayer.pause();
+            	playPauseImage.src = "play.png";
+		audioPlayer.classList.remove("playing"); 	
+		}
+        }
+
+	
+
+        function playAudio() {
+            audioPlayer.play();
+        }
+
+        function pauseAudio() {
+            audioPlayer.pause();
+        }
+
+        function seekForward() {
+            audioPlayer.currentTime += 5;
+        }
+
+        function seekBackward() {
+            audioPlayer.currentTime -= 5;
+        }
+
+        const seekBar = document.getElementById("seekBar");
+        audioPlayer.addEventListener("loadedmetadata", function() {
+            seekBar.max = audioPlayer.duration;
+        });
+
+        audioPlayer.addEventListener("timeupdate", function() {
+            seekBar.value = audioPlayer.currentTime;
+        });
+
+        seekBar.addEventListener("input", function() {
+            audioPlayer.currentTime = seekBar.value;
+        });
+
+
+ 	const imageElement = document.getElementById("image");
+        let isImage1 = true;
+        const image1Src = "play.png";
+        const image2Src = "pause.png";
+
+        function toggleImage() {
+            if (isImage1) {
+                imageElement.src = image2Src;
+            } else {
+                imageElement.src = image1Src;
+            }
+            isImage1 = !isImage1;
+        }
+    </script>
+
+
+	</script>
+
+</html>

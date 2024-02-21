@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Player</title>
+  </head>
+<style>
+/* Styles for the audio player */
+
+.audio-player {
+  text-align: center;
+  margin: 20px;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+</style>
+<Script language="javascript">
+// JavaScript for the audio player
+
+const player = document.getElementById("player");
+const playBtn = document.getElementById("play-btn");
+const pauseBtn = document.getElementById("pause-btn");
+const volumeSlider = document.getElementById("volume-slider");
+
+playBtn.addEventListener("click", () => {
+  player.play();
+});
+
+pauseBtn.addEventListener("click", () => {
+  player.pause();
+});
+
+volumeSlider.addEventListener("input", () => {
+  player.volume = volumeSlider.value;
+});
+
+</script>
+<body>
+  <div class="audio-player">
+    <audio id="player" src="raatan.mp3"></audio>
+    <div class="controls">
+      <button id="play-btn"><i class="fas fa-play"></i></button>
+      <button id="pause-btn"><i class="fas fa-pause"></i></button>
+      <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
+
+  
+</body>
+</html>
